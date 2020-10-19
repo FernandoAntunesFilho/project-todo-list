@@ -1,15 +1,50 @@
+body {
+    background-image: url(imgs/background.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+header{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+li {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.botton-buttons {
+    height: 60px;    
+}
+
+.mais-largo {
+    width: 60px;
+}
+
+.center {
+    text-align: center;
+}
+
 #lista-tarefas{
-    cursor: pointer
+    cursor: pointer;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .selecionado{
-    background-color: rgb(128,128,128);
+    background-color: rgb(144, 221, 240);
 }
 
 li{
-    background-color: rgb(255,255,255);
+    background-color: transparent;    
 }
 
 .completed{
     text-decoration: line-through solid rgb(0,0,0);
+}
+
+#rodape {
+    margin-top: 30px;
 }

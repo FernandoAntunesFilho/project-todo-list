@@ -31,17 +31,13 @@ window.onload=function(){
     })
     
     botaoSalvaLista.addEventListener('click', function(){
-        localStorage.clear();
-        //alert("entrei na function");
+        localStorage.clear();        
         let todosItens=document.getElementsByTagName('li');
             for(let index=0; index<todosItens.length; index+=1){
-                //alert("entrei no for " + index);
-                //localStorage.setItem(`item${index+1}-posicao`, index);
                 localStorage.setItem(`item${index+1}-texto`, todosItens[index].innerText);
                 if (todosItens[index].classList.contains('completed')){
                     localStorage.setItem(`item${index+1}-classe`, 'completed');
                 }
-                //console.log(todosItens[index].innerText)
             }
     })
 
@@ -67,9 +63,7 @@ window.onload=function(){
             for(let i=todosItens.length-1; i>=0; i-=1){
                 if (selecionado[0]===todosItens[i]){
                     if(i<todosItens.length-1){
-                        //alert(`entrei no ultimo if ${i}`)
                         listaTarefas.insertBefore(selecionado[0],listaTarefas.childNodes[i+1].nextSibling);
-                        //alert(listaTarefas.childNodes[i+1].innerText)
                     }
                 }
             }
@@ -103,7 +97,6 @@ window.onload=function(){
     function adicionaTarefa(tarefa){
         let adicionaTarefa=document.createElement('li');
         adicionaTarefa.innerText=tarefa;
-        //adicionaTarefa.className='item-list';
         listaTarefas.appendChild(adicionaTarefa);
         novaTarefa.value='';
     }
